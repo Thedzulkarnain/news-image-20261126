@@ -25,13 +25,15 @@
   .leads { display:flex; gap:10px; margin-top:5px; }
   .lead { flex:1; }
   .leadimg { position:relative; width:100%; height:126px; overflow:hidden; background:#222; }
-  .leadimg img { width:100%; height:100%; object-fit:cover; display:block; }
+  .leadimg svg { width:100%; height:100%; display:block; }
   .num { position:absolute; left:5px; top:5px; width:22px; height:22px; border-radius:50%;
          background:#b91c1c; color:#fff; font-family: Arial, Helvetica, sans-serif; font-size:12px; font-weight:900;
          display:flex; align-items:center; justify-content:center; }
   .labelbar { position:absolute; left:0; bottom:0; background:#b91c1c; color:#fff;
               font-family: Arial, Helvetica, sans-serif; font-size:10.5px; font-weight:900; letter-spacing:0.6px;
               padding:3px 8px; }
+  .labelbar.tr { left:auto; right:0; top:0; bottom:auto; }
+  .labelbar.black { background:#111; }
   .loc { font-family: Arial, Helvetica, sans-serif; font-size:9.5px; font-weight:900; color:#b91c1c;
          letter-spacing:0.8px; margin-top:3px; }
   .lead h2 { font-size:15.5px; line-height:1.16; font-weight:900; margin-top:1px; height:34px; }
@@ -44,8 +46,11 @@
   .medrow { display:flex; gap:10px; }
   .medrow + .medrow { margin-top:7px; }
   .med { flex:1; }
-  .thumb { width:100%; height:52px; overflow:hidden; }
+  .thumb { position:relative; width:100%; height:52px; overflow:hidden; }
   .thumb svg { width:100%; height:100%; display:block; }
+  .tnum { position:absolute; left:4px; top:4px; width:18px; height:18px; border-radius:50%;
+          background:#b91c1c; color:#fff; font-family: Arial, Helvetica, sans-serif; font-size:10px; font-weight:900;
+          display:flex; align-items:center; justify-content:center; }
   .med .loc { margin-top:2px; }
   .med h3 { font-size:12px; line-height:1.2; font-weight:900; margin-top:1px; height:26px; }
   .med .src { margin-top:2px; }
@@ -104,21 +109,21 @@
 
   <div class="leads">
     <div class="lead">
-      <div class="leadimg"><img src="lead-macys.png" alt="Macy's parade"><span class="num">1</span><span class="labelbar">POSTPONED TO SATURDAY</span></div>
+      <div class="leadimg"><svg viewBox="0 0 325 126" preserveAspectRatio="xMidYMid slice"><rect width="325" height="126" fill="#1b2a4a"/><g stroke="#8fb4e3" stroke-width="1.5" opacity="0.55"><line x1="20" y1="10" x2="14" y2="30"/><line x1="60" y1="4" x2="54" y2="24"/><line x1="110" y1="12" x2="104" y2="32"/><line x1="250" y1="6" x2="244" y2="26"/><line x1="290" y1="14" x2="284" y2="34"/><line x1="200" y1="4" x2="194" y2="24"/></g><g fill="#0e1a30"><rect x="0" y="70" width="40" height="56"/><rect x="45" y="55" width="34" height="71"/><rect x="84" y="78" width="30" height="48"/><rect x="210" y="62" width="36" height="64"/><rect x="251" y="48" width="30" height="78"/><rect x="286" y="70" width="39" height="56"/></g><g fill="#ffd166"><rect x="8" y="80" width="5" height="7"/><rect x="20" y="92" width="5" height="7"/><rect x="52" y="64" width="5" height="7"/><rect x="64" y="78" width="5" height="7"/><rect x="90" y="86" width="5" height="7"/><rect x="218" y="72" width="5" height="7"/><rect x="258" y="58" width="5" height="7"/><rect x="268" y="72" width="5" height="7"/><rect x="296" y="80" width="5" height="7"/><rect x="310" y="94" width="5" height="7"/></g><ellipse cx="160" cy="42" rx="58" ry="30" fill="#f8fafc"/><circle cx="160" cy="66" r="16" fill="#f8fafc"/><circle cx="146" cy="38" r="4" fill="#111"/><circle cx="174" cy="38" r="4" fill="#111"/><circle cx="160" cy="48" r="6" fill="#dc2626"/><path d="M160 82 Q150 100 158 118" stroke="#e5e7eb" stroke-width="2" fill="none"/><circle cx="296" cy="100" r="17" fill="#f59e0b"/><text x="296" y="105" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="900" fill="#1e293b">100</text></svg><span class="num">1</span><span class="labelbar">POSTPONED TO SATURDAY</span></div>
       <div class="loc">NEW YORK &middot; PARADE</div>
       <h2>Macy&rsquo;s 100th Thanksgiving parade postponed to Saturday</h2>
       <p>A nor&rsquo;easter brings 60 mph gusts to New York; the parade moves to Saturday, a first in 100 years.</p>
-      <div class="src"><span>SOURCE: AP</span><span class="badge">CONFIRMED</span></div>
+      <div class="src"><span>SOURCE: AP</span><span class="badge">REPORTED</span></div>
     </div>
     <div class="lead">
-      <div class="leadimg"><img src="lead-india.png" alt="India 26/11 anniversary"><span class="num">2</span><span class="labelbar">18 YEARS</span></div>
+      <div class="leadimg"><svg viewBox="0 0 325 126" preserveAspectRatio="xMidYMid slice"><rect width="325" height="126" fill="#f7c795"/><rect y="80" width="325" height="46" fill="#e89b5a"/><circle cx="282" cy="24" r="14" fill="#fde68a"/><g fill="#5b3a29"><path d="M30 126 V58 Q30 22 95 22 Q160 22 160 58 V126 Z"/><circle cx="95" cy="20" r="12"/><rect x="92" y="4" width="6" height="8"/><rect x="18" y="70" width="14" height="56"/><rect x="158" y="70" width="14" height="56"/></g><path d="M68 126 V74 Q68 52 95 52 Q122 52 122 74 V126 Z" fill="#f7c795"/><line x1="212" y1="20" x2="212" y2="80" stroke="#78350f" stroke-width="2.5"/><rect x="212" y="26" width="36" height="9" fill="#ff9933"/><rect x="212" y="35" width="36" height="9" fill="#f8fafc"/><rect x="212" y="44" width="36" height="9" fill="#138808"/><circle cx="230" cy="39.5" r="4" fill="none" stroke="#000080" stroke-width="1.2"/><g fill="#f8fafc"><rect x="196" y="104" width="7" height="16"/><rect x="214" y="104" width="7" height="16"/><rect x="232" y="104" width="7" height="16"/><rect x="250" y="104" width="7" height="16"/><rect x="268" y="104" width="7" height="16"/><rect x="286" y="104" width="7" height="16"/></g><g fill="#f59e0b"><ellipse cx="199.5" cy="100" rx="3" ry="5"/><ellipse cx="217.5" cy="100" rx="3" ry="5"/><ellipse cx="235.5" cy="100" rx="3" ry="5"/><ellipse cx="253.5" cy="100" rx="3" ry="5"/><ellipse cx="271.5" cy="100" rx="3" ry="5"/><ellipse cx="289.5" cy="100" rx="3" ry="5"/></g></svg><span class="num">2</span><span class="labelbar tr black">18 YEARS</span></div>
       <div class="loc">MUMBAI &middot; INDIA</div>
       <h2>India marks 18 years since the 26/11 Mumbai attacks</h2>
       <p>Tributes across India on the anniversary, as the nation also marks 77 years of its Constitution; 166 were killed in 2008.</p>
       <div class="src"><span>SOURCE: PTI</span><span class="badge">CONFIRMED</span></div>
     </div>
     <div class="lead">
-      <div class="leadimg"><img src="lead-chess.png" alt="Chess title match"><span class="num">3</span><span class="labelbar">GAME 3</span></div>
+      <div class="leadimg"><svg viewBox="0 0 325 126" preserveAspectRatio="xMidYMid slice"><defs><pattern id="cb" width="22" height="22" patternUnits="userSpaceOnUse"><rect width="22" height="22" fill="#f5f5dc"/><rect width="11" height="11" fill="#2b2b2b"/><rect x="11" y="11" width="11" height="11" fill="#2b2b2b"/></pattern></defs><rect width="325" height="126" fill="#173b2c"/><rect x="14" y="14" width="88" height="88" fill="url(#cb)"/><rect x="14" y="14" width="88" height="88" fill="none" stroke="#0f2a1e" stroke-width="2"/><rect x="150" y="28" width="62" height="38" rx="4" fill="#f8fafc"/><rect x="228" y="28" width="62" height="38" rx="4" fill="#f8fafc"/><text x="181" y="53" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="900" fill="#111">1:32</text><text x="259" y="53" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="900" fill="#111">1:32</text><text x="181" y="20" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="900" fill="#fca5a5">L</text><text x="259" y="20" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="900" fill="#fca5a5">L</text><text x="162" y="112" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="900" fill="#ffffff">GUKESH 1 &ndash; 1 SINDAROV</text></svg><span class="num">3</span><span class="labelbar tr">GAME 3</span></div>
       <div class="loc">GENEVA &middot; CHESS</div>
       <h2>Gukesh meets Sindarov in Game 3 of the title match</h2>
       <p>The world championship is level after two draws; Game 3 is played in Geneva today, Sindarov with White.</p>
@@ -129,66 +134,66 @@
   <div class="meds">
     <div class="medrow">
       <div class="med">
-        <div class="thumb"><svg viewBox="0 0 190 56" preserveAspectRatio="xMidYMid slice"><rect width="190" height="56" fill="#f59e0b"/><rect y="34" width="190" height="22" fill="#78350f"/><rect x="14" y="22" width="34" height="14" fill="#44403c"/><rect x="56" y="16" width="40" height="20" fill="#57534e"/><rect x="104" y="24" width="30" height="12" fill="#44403c"/><rect x="20" y="8" width="5" height="16" fill="#292524"/><rect x="62" y="4" width="5" height="14" fill="#292524"/><rect x="110" y="10" width="5" height="16" fill="#292524"/><circle cx="28" cy="6" r="5" fill="#e7e5e4" opacity="0.8"/><circle cx="70" cy="3" r="4" fill="#e7e5e4" opacity="0.8"/><path d="M150 34 L158 18 L166 34 L174 14 L182 34 Z" fill="#dc2626"/><circle cx="166" cy="26" r="6" fill="#fbbf24"/></svg></div>
+        <div class="thumb"><span class="tnum">4</span><svg viewBox="0 0 190 56" preserveAspectRatio="xMidYMid slice"><rect width="190" height="56" fill="#f59e0b"/><rect y="34" width="190" height="22" fill="#78350f"/><rect x="14" y="22" width="34" height="14" fill="#44403c"/><rect x="56" y="16" width="40" height="20" fill="#57534e"/><rect x="104" y="24" width="30" height="12" fill="#44403c"/><rect x="20" y="8" width="5" height="16" fill="#292524"/><rect x="62" y="4" width="5" height="14" fill="#292524"/><rect x="110" y="10" width="5" height="16" fill="#292524"/><g fill="#fff" opacity="0.85"><circle cx="28" cy="6" r="5"/><circle cx="70" cy="3" r="4"/><circle cx="118" cy="8" r="4"/></g><path d="M150 34 L158 18 L166 34 L174 14 L182 34 Z" fill="#dc2626"/><circle cx="166" cy="26" r="6" fill="#fbbf24"/></svg></div>
         <div class="loc">RAS TANURA</div>
         <h3>Houthis say they hit Saudi Arabia&rsquo;s Ras Tanura refinery</h3>
         <div class="src"><span>REUTERS</span><span class="badge">CLAIM</span></div>
       </div>
       <div class="med">
-        <div class="thumb"><svg viewBox="0 0 190 56" preserveAspectRatio="xMidYMid slice"><rect width="190" height="56" fill="#bae6fd"/><rect y="30" width="190" height="26" fill="#0369a1"/><path d="M0 34 Q25 30 50 34 T100 34 T150 34 T190 34 L190 56 L0 56 Z" fill="#0284c7"/><rect x="55" y="18" width="80" height="14" fill="#7f1d1d"/><rect x="118" y="8" width="14" height="12" fill="#f8fafc"/><rect x="60" y="10" width="4" height="10" fill="#f8fafc"/><circle cx="30" cy="44" r="4" fill="#111827"/><path d="M26 44 L34 44 M30 40 L30 48" stroke="#111827" stroke-width="1.5"/><circle cx="165" cy="46" r="4" fill="#111827"/><path d="M161 46 L169 46 M165 42 L165 50" stroke="#111827" stroke-width="1.5"/><path d="M55 32 L135 32 L130 40 L60 40 Z" fill="#450a0a"/></svg></div>
+        <div class="thumb"><span class="tnum">5</span><svg viewBox="0 0 190 56" preserveAspectRatio="xMidYMid slice"><rect width="190" height="56" fill="#bae6fd"/><rect y="30" width="190" height="26" fill="#0369a1"/><path d="M0 34 Q25 30 50 34 T100 34 T150 34 T190 34 L190 56 L0 56 Z" fill="#0284c7"/><rect x="55" y="18" width="80" height="14" fill="#7f1d1d"/><rect x="118" y="8" width="14" height="12" fill="#f8fafc"/><rect x="60" y="10" width="4" height="10" fill="#f8fafc"/><circle cx="30" cy="44" r="4" fill="#111827"/><path d="M26 44 L34 44 M30 40 L30 48" stroke="#111827" stroke-width="1.5"/><circle cx="165" cy="46" r="4" fill="#111827"/><path d="M161 46 L169 46 M165 42 L165 50" stroke="#111827" stroke-width="1.5"/><path d="M55 32 L135 32 L130 40 L60 40 Z" fill="#450a0a"/></svg></div>
         <div class="loc">STRAIT OF HORMUZ</div>
         <h3>Two tankers hit naval mines in the Strait of Hormuz</h3>
         <div class="src"><span>REUTERS</span><span class="badge">REPORTED</span></div>
       </div>
       <div class="med">
-        <div class="thumb"><svg viewBox="0 0 190 56" preserveAspectRatio="xMidYMid slice"><rect width="190" height="56" fill="#1e3a8a"/><circle cx="95" cy="28" r="20" fill="none" stroke="#facc15" stroke-width="1.5" stroke-dasharray="0"/><g fill="#facc15"><circle cx="95" cy="9" r="2.2"/><circle cx="112" cy="13" r="2.2"/><circle cx="114" cy="28" r="2.2"/><circle cx="112" cy="43" r="2.2"/><circle cx="95" cy="47" r="2.2"/><circle cx="78" cy="43" r="2.2"/><circle cx="76" cy="28" r="2.2"/><circle cx="78" cy="13" r="2.2"/></g><rect x="70" y="44" width="50" height="12" fill="#dbeafe"/><rect x="74" y="47" width="6" height="9" fill="#1e3a8a"/><rect x="86" y="47" width="6" height="9" fill="#1e3a8a"/><rect x="98" y="47" width="6" height="9" fill="#1e3a8a"/><rect x="110" y="47" width="6" height="9" fill="#1e3a8a"/></svg></div>
-        <div class="loc">BRUSSELS &middot; EUROPE</div>
-        <h3>EU leaders meet on budget and Ukraine aid</h3>
-        <div class="src"><span>COUNCIL OF THE EU</span><span class="badge">OFFICIAL</span></div>
-      </div>
-      <div class="med">
-        <div class="thumb"><svg viewBox="0 0 190 56" preserveAspectRatio="xMidYMid slice"><rect width="190" height="56" fill="#0f172a"/><rect x="10" y="26" width="26" height="30" fill="#1e293b"/><rect x="42" y="18" width="30" height="38" fill="#334155"/><rect x="80" y="30" width="24" height="26" fill="#1e293b"/><rect x="112" y="22" width="34" height="34" fill="#334155"/><rect x="152" y="28" width="26" height="28" fill="#1e293b"/><circle cx="165" cy="12" r="3" fill="#fde68a"/><circle cx="30" cy="10" r="2" fill="#e2e8f0"/><circle cx="90" cy="8" r="2" fill="#e2e8f0"/><path d="M140 40 L146 26 L152 40 L158 24 L164 40 L170 28 L176 40 Z" fill="#f97316"/><circle cx="158" cy="34" r="7" fill="#fbbf24"/></svg></div>
+        <div class="thumb"><span class="tnum">6</span><svg viewBox="0 0 190 56" preserveAspectRatio="xMidYMid slice"><rect width="190" height="56" fill="#e8dcc3"/><rect y="40" width="190" height="16" fill="#b8a88a"/><rect x="18" y="14" width="70" height="28" fill="#cbb894"/><rect x="26" y="20" width="12" height="10" fill="#3f3f46"/><rect x="48" y="20" width="12" height="10" fill="#3f3f46"/><rect x="70" y="20" width="12" height="10" fill="#3f3f46"/><path d="M52 14 L58 26 L54 34" stroke="#78350f" stroke-width="2" fill="none"/><path d="M18 42 L30 34 L42 42 L54 34 L66 42 L80 36 L88 42 Z" fill="#8a7a5c"/><g fill="#9ca3af"><circle cx="140" cy="14" r="9"/><circle cx="152" cy="10" r="11"/><circle cx="164" cy="15" r="8"/></g><rect x="120" y="26" width="40" height="16" fill="#a89878"/><rect x="128" y="30" width="8" height="8" fill="#3f3f46"/></svg></div>
         <div class="loc">GAZA</div>
         <h3>Israeli strike kills Hamas security chief in Gaza</h3>
         <div class="src"><span>AP</span><span class="badge">REPORTED</span></div>
       </div>
       <div class="med">
-        <div class="thumb"><svg viewBox="0 0 190 56" preserveAspectRatio="xMidYMid slice"><rect width="190" height="56" fill="#111827"/><circle cx="170" cy="10" r="2" fill="#e5e7eb"/><circle cx="140" cy="6" r="1.5" fill="#e5e7eb"/><circle cx="30" cy="8" r="1.5" fill="#e5e7eb"/><path d="M10 50 L150 12" stroke="#22c55e" stroke-width="3"/><path d="M10 50 L150 12" stroke="#a7f3d0" stroke-width="1"/><rect x="138" y="8" width="22" height="8" rx="2" fill="#374151"/><circle cx="149" cy="4" r="4" fill="#6b7280"/><path d="M160 12 L176 20 L160 20 Z" fill="#9ca3af"/><path d="M20 44 L26 34 L32 44 Z" fill="#4b5563"/></svg></div>
+        <div class="thumb"><span class="tnum">7</span><svg viewBox="0 0 190 56" preserveAspectRatio="xMidYMid slice"><rect width="190" height="56" fill="#1e40af"/><circle cx="170" cy="12" r="2" fill="#fff"/><circle cx="140" cy="7" r="1.5" fill="#fff"/><circle cx="30" cy="8" r="1.5" fill="#fff"/><circle cx="158" cy="16" r="8" fill="#fde047"/><circle cx="158" cy="16" r="3" fill="#f59e0b"/><path d="M10 50 L150 18" stroke="#4ade80" stroke-width="4"/><path d="M10 50 L150 18" stroke="#bbf7d0" stroke-width="1.5"/><path d="M152 14 L172 22 L152 22 Z" fill="#e5e7eb"/><path d="M14 44 L22 32 L30 44 Z" fill="#64748b"/><rect x="8" y="44" width="28" height="12" fill="#475569"/><rect x="62" y="38" width="66" height="12" fill="#14532d"/><text x="95" y="47" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="8.5" font-weight="900" fill="#4ade80">BLYSK LASER</text></svg></div>
         <div class="loc">UKRAINE</div>
         <h3>Ukraine says laser downed a jet-powered drone</h3>
         <div class="src"><span>EUROMAIDAN</span><span class="badge">CLAIM</span></div>
       </div>
-    </div>
-    <div class="medrow">
       <div class="med">
-        <div class="thumb"><svg viewBox="0 0 190 56" preserveAspectRatio="xMidYMid slice"><rect width="190" height="56" fill="#1e293b"/><path d="M0 56 L0 20 L14 8 L28 20 L28 56 Z" fill="#0f172a"/><path d="M14 8 L14 56" stroke="#64748b" stroke-width="1.5"/><path d="M0 20 L28 20" stroke="#64748b" stroke-width="1.5"/><path d="M60 56 L60 26 L74 14 L88 26 L88 56 Z" fill="#0f172a"/><path d="M74 14 L74 56" stroke="#64748b" stroke-width="1.5"/><path d="M60 26 L88 26" stroke="#64748b" stroke-width="1.5"/><path d="M120 56 L120 22 L134 10 L148 22 L148 56 Z" fill="#0f172a"/><path d="M134 10 L134 56" stroke="#64748b" stroke-width="1.5"/><path d="M100 50 L108 34 L114 44 L122 28 L128 42 L134 34 L140 50 Z" fill="#facc15"/><circle cx="170" cy="12" r="8" fill="#fde68a"/></svg></div>
+        <div class="thumb"><span class="tnum">8</span><svg viewBox="0 0 190 56" preserveAspectRatio="xMidYMid slice"><rect width="190" height="56" fill="#1e3a8a"/><g fill="#172554"><rect x="8" y="24" width="22" height="32"/><rect x="36" y="16" width="26" height="40"/><rect x="68" y="28" width="20" height="28"/><rect x="94" y="20" width="28" height="36"/><rect x="128" y="26" width="22" height="30"/><rect x="156" y="30" width="20" height="26"/></g><g fill="#fde047"><rect x="14" y="30" width="3" height="4"/><rect x="44" y="22" width="3" height="4"/><rect x="102" y="26" width="3" height="4"/><rect x="134" y="32" width="3" height="4"/></g><path d="M84 6 L72 26 L80 26 L70 46 L92 22 L83 22 L94 6 Z" fill="#facc15"/><rect x="104" y="6" width="78" height="12" fill="#0f172a"/><text x="143" y="15" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="8.5" font-weight="900" fill="#facc15">REGIONS DARK</text></svg></div>
         <div class="loc">UKRAINE</div>
         <h3>Russian strikes cut power across five Ukrainian regions</h3>
         <div class="src"><span>REUTERS</span><span class="badge">REPORTED</span></div>
       </div>
+    </div>
+    <div class="medrow">
       <div class="med">
-        <div class="thumb"><svg viewBox="0 0 190 56" preserveAspectRatio="xMidYMid slice"><rect width="190" height="56" fill="#fef3c7"/><rect x="20" y="30" width="18" height="26" fill="#dc2626"/><rect x="48" y="22" width="18" height="34" fill="#ea580c"/><rect x="76" y="14" width="18" height="42" fill="#f59e0b"/><rect x="104" y="24" width="18" height="32" fill="#16a34a"/><rect x="132" y="10" width="18" height="46" fill="#2563eb"/><path d="M18 28 L60 18 L100 12 L150 6" stroke="#111827" stroke-width="2" fill="none"/><path d="M150 6 L140 6 M150 6 L150 14" stroke="#111827" stroke-width="2"/><rect x="158" y="8" width="24" height="16" fill="#111827"/><rect x="160" y="10" width="20" height="12" fill="#f8fafc"/></svg></div>
+        <div class="thumb"><span class="tnum">9</span><svg viewBox="0 0 190 56" preserveAspectRatio="xMidYMid slice"><rect width="190" height="56" fill="#fef3c7"/><rect x="20" y="30" width="18" height="26" fill="#dc2626"/><rect x="48" y="22" width="18" height="34" fill="#ea580c"/><rect x="76" y="14" width="18" height="42" fill="#f59e0b"/><rect x="104" y="24" width="18" height="32" fill="#16a34a"/><rect x="132" y="10" width="18" height="46" fill="#2563eb"/><path d="M18 28 L60 18 L100 12 L150 6" stroke="#111827" stroke-width="2" fill="none"/><path d="M150 6 L140 6 M150 6 L150 14" stroke="#111827" stroke-width="2"/><rect x="120" y="4" width="64" height="13" fill="#b91c1c"/><text x="152" y="13.5" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="8.5" font-weight="900" fill="#fff">14 PARTNERS</text></svg></div>
         <div class="loc">WASHINGTON</div>
         <h3>US proposes new tariffs on 14 trading partners</h3>
         <div class="src"><span>REUTERS</span><span class="badge">CONFIRMED</span></div>
       </div>
       <div class="med">
-        <div class="thumb"><svg viewBox="0 0 190 56" preserveAspectRatio="xMidYMid slice"><rect width="190" height="56" fill="#e0f2fe"/><path d="M0 56 L0 30 L24 18 L48 30 L72 18 L96 30 L120 18 L144 30 L168 18 L190 30 L190 56 Z" fill="#0369a1"/><rect x="16" y="34" width="30" height="22" fill="#7c2d12"/><rect x="60" y="34" width="30" height="22" fill="#7c2d12"/><rect x="104" y="34" width="30" height="22" fill="#7c2d12"/><rect x="148" y="34" width="30" height="22" fill="#7c2d12"/><circle cx="170" cy="10" r="7" fill="#fbbf24"/><circle cx="30" cy="8" r="5" fill="#fde68a"/><path d="M40 20 Q50 12 60 20" stroke="#0c4a6e" stroke-width="2" fill="none"/></svg></div>
+        <div class="thumb"><span class="tnum">10</span><svg viewBox="0 0 190 56" preserveAspectRatio="xMidYMid slice"><rect width="190" height="56" fill="#fef3c7"/><rect y="44" width="190" height="12" fill="#d97706"/><rect x="14" y="16" width="90" height="28" fill="#b45309"/><rect x="20" y="22" width="12" height="9" fill="#fef3c7"/><rect x="38" y="22" width="12" height="9" fill="#fef3c7"/><rect x="56" y="22" width="12" height="9" fill="#fef3c7"/><rect x="74" y="22" width="12" height="9" fill="#fef3c7"/><rect x="20" y="34" width="12" height="9" fill="#fef3c7"/><rect x="38" y="34" width="12" height="9" fill="#fef3c7"/><rect x="56" y="34" width="12" height="9" fill="#fef3c7"/><rect x="112" y="8" width="10" height="36" fill="#92400e"/><circle cx="117" cy="6" r="4" fill="#e5e7eb" opacity="0.8"/><circle cx="150" cy="38" r="8" fill="#dc2626"/><circle cx="168" cy="38" r="8" fill="#2563eb"/><rect x="104" y="4" width="82" height="13" fill="#fff" stroke="#b91c1c" stroke-width="1"/><text x="145" y="13.5" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="8.5" font-weight="900" fill="#b91c1c">Tk 17,000 +36%</text></svg></div>
         <div class="loc">DHAKA</div>
         <h3>Bangladesh lifts garment minimum wage 36% to Tk 17,000</h3>
         <div class="src"><span>AFP</span><span class="badge">CONFIRMED</span></div>
       </div>
       <div class="med">
-        <div class="thumb"><svg viewBox="0 0 190 56" preserveAspectRatio="xMidYMid slice"><rect width="190" height="56" fill="#020617"/><circle cx="20" cy="10" r="1.5" fill="#fff"/><circle cx="60" cy="6" r="1.5" fill="#fff"/><circle cx="120" cy="12" r="1.5" fill="#fff"/><circle cx="170" cy="8" r="1.5" fill="#fff"/><circle cx="90" cy="16" r="1.5" fill="#fff"/><path d="M0 52 Q95 30 190 52 L190 56 L0 56 Z" fill="#2563eb"/><rect x="70" y="18" width="50" height="10" rx="3" fill="#cbd5e1"/><rect x="82" y="28" width="26" height="8" rx="2" fill="#94a3b8"/><rect x="40" y="22" width="26" height="5" fill="#38bdf8"/><rect x="124" y="22" width="26" height="5" fill="#38bdf8"/><circle cx="95" cy="23" r="4" fill="#f59e0b"/></svg></div>
+        <div class="thumb"><span class="tnum">11</span><svg viewBox="0 0 190 56" preserveAspectRatio="xMidYMid slice"><rect width="190" height="56" fill="#1e3a8a"/><g fill="#fff"><circle cx="18" cy="8" r="1.5"/><circle cx="60" cy="6" r="1.5"/><circle cx="120" cy="10" r="1.5"/><circle cx="170" cy="7" r="1.5"/><circle cx="90" cy="14" r="1.2"/><circle cx="150" cy="20" r="1.2"/></g><circle cx="95" cy="66" r="26" fill="#2563eb"/><path d="M70 60 Q85 52 100 60 Q115 54 122 62 Q110 70 95 68 Q80 70 70 60 Z" fill="#22c55e"/><rect x="38" y="14" width="12" height="22" rx="4" fill="#f8fafc"/><path d="M38 14 L44 4 L50 14 Z" fill="#dc2626"/><rect x="34" y="28" width="5" height="8" fill="#dc2626"/><rect x="49" y="28" width="5" height="8" fill="#dc2626"/><path d="M44 36 L40 46 L48 46 Z" fill="#f59e0b"/><ellipse cx="140" cy="20" rx="26" ry="7" fill="none" stroke="#cbd5e1" stroke-width="3"/><circle cx="140" cy="20" r="5" fill="#f8fafc"/><text x="10" y="50" font-family="Arial, Helvetica, sans-serif" font-size="8.5" font-weight="900" fill="#fff" letter-spacing="1">TIANGONG</text></svg></div>
         <div class="loc">TIANGONG</div>
         <h3>Shenzhou-24 docks, first Pakistani reaches orbit</h3>
         <div class="src"><span>XINHUA</span><span class="badge">CONFIRMED</span></div>
       </div>
       <div class="med">
-        <div class="thumb"><svg viewBox="0 0 190 56" preserveAspectRatio="xMidYMid slice"><rect width="190" height="56" fill="#f1f5f9"/><rect x="24" y="10" width="120" height="36" rx="2" fill="#fff" stroke="#94a3b8"/><path d="M34 20 L134 20 M34 27 L120 27 M34 34 L100 34" stroke="#64748b" stroke-width="2"/><rect x="34" y="16" width="10" height="4" fill="#dc2626"/><rect x="48" y="16" width="10" height="4" fill="#dc2626"/><circle cx="150" cy="40" r="12" fill="none" stroke="#dc2626" stroke-width="2.5"/><path d="M142 40 L150 48 L160 32" stroke="#dc2626" stroke-width="2.5" fill="none"/><rect x="24" y="10" width="120" height="36" rx="2" fill="none" stroke="#94a3b8"/></svg></div>
+        <div class="thumb"><span class="tnum">12</span><svg viewBox="0 0 190 56" preserveAspectRatio="xMidYMid slice"><rect width="190" height="56" fill="#f8fafc"/><rect x="16" y="10" width="70" height="34" rx="2" fill="#fff" stroke="#94a3b8"/><path d="M24 18 L78 18 M24 25 L72 25 M24 32 L66 32" stroke="#64748b" stroke-width="2"/><rect x="24" y="14" width="8" height="3" fill="#dc2626"/><rect x="36" y="14" width="8" height="3" fill="#dc2626"/><rect x="10" y="14" width="70" height="34" rx="2" fill="#fff" stroke="#94a3b8"/><path d="M18 22 L72 22 M18 29 L66 29 M18 36 L60 36" stroke="#64748b" stroke-width="2"/><rect x="18" y="18" width="8" height="3" fill="#dc2626"/><rect x="30" y="18" width="8" height="3" fill="#dc2626"/><rect x="96" y="30" width="10" height="16" fill="#2563eb"/><rect x="110" y="24" width="10" height="22" fill="#2563eb"/><rect x="124" y="18" width="10" height="28" fill="#2563eb"/><rect x="138" y="12" width="10" height="34" fill="#2563eb"/><circle cx="164" cy="34" r="10" fill="none" stroke="#111827" stroke-width="2.5"/><line x1="171" y1="42" x2="180" y2="50" stroke="#111827" stroke-width="3"/><text x="186" y="10" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="10.5" font-weight="900" fill="#dc2626">490,334</text><rect x="14" y="40" width="34" height="11" fill="none" stroke="#dc2626" stroke-width="1.5"/><text x="31" y="48.5" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="8" font-weight="900" fill="#dc2626">LEAK</text></svg></div>
         <div class="loc">MOSCOW</div>
         <h3>Leaked data put Russian war dead near 500,000</h3>
         <div class="src"><span>BBC</span><span class="badge">REPORTED</span></div>
+      </div>
+      <div class="med">
+        <div class="thumb"><span class="tnum">13</span><svg viewBox="0 0 190 56" preserveAspectRatio="xMidYMid slice"><rect width="190" height="56" fill="#bae6fd"/><circle cx="122" cy="9" r="6" fill="#fbbf24"/><rect y="38" width="190" height="18" fill="#0284c7"/><path d="M60 38 L95 16 L130 38 Z" fill="#16a34a"/><path d="M78 38 L95 24 L112 38 Z" fill="#15803d"/><line x1="40" y1="38" x2="40" y2="16" stroke="#78350f" stroke-width="2"/><rect x="40" y="16" width="22" height="12" fill="#2563eb"/><path d="M40 16 L62 22 L40 28 Z" fill="#facc15"/><g fill="#fff"><circle cx="46" cy="20" r="1"/><circle cx="52" cy="24" r="1"/><circle cx="56" cy="19" r="1"/></g><line x1="150" y1="38" x2="150" y2="16" stroke="#78350f" stroke-width="2"/><rect x="150" y="16" width="22" height="12" fill="#1e3a8a"/><g fill="#fff"><circle cx="156" cy="20" r="1.2"/><circle cx="164" cy="24" r="1.2"/><circle cx="168" cy="19" r="1.2"/></g><text x="186" y="12" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="900" fill="#1d4ed8">A$740m</text><rect x="140" y="42" width="42" height="11" fill="none" stroke="#dc2626" stroke-width="1.5"/><text x="161" y="50.5" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="8" font-weight="900" fill="#dc2626">SIGNED</text></svg></div>
+        <div class="loc">SOLOMON ISLANDS</div>
+        <h3>Solomon Islands signs security pact with Australia</h3>
+        <div class="src"><span>AP</span><span class="badge">CONFIRMED</span></div>
       </div>
     </div>
   </div>
@@ -215,14 +220,14 @@
         <span class="pin" style="left:49%;top:22%">3</span>
         <span class="pin" style="left:60%;top:40%">4</span>
         <span class="pin" style="left:63%;top:44%">5</span>
-        <span class="pin" style="left:47.5%;top:20%">6</span>
-        <span class="pin" style="left:58%;top:38%">7</span>
-        <span class="pin" style="left:54%;top:16%">8</span>
-        <span class="pin" style="left:56%;top:20%">9</span>
-        <span class="pin" style="left:21%;top:34%">10</span>
-        <span class="pin" style="left:74%;top:47%">11</span>
-        <span class="pin" style="left:80%;top:38%">12</span>
-        <span class="pin" style="left:55%;top:10%">13</span>
+        <span class="pin" style="left:58%;top:38%">6</span>
+        <span class="pin" style="left:52%;top:14%">7</span>
+        <span class="pin" style="left:57%;top:19%">8</span>
+        <span class="pin" style="left:21%;top:34%">9</span>
+        <span class="pin" style="left:74%;top:47%">10</span>
+        <span class="pin" style="left:80%;top:38%">11</span>
+        <span class="pin" style="left:55%;top:10%">12</span>
+        <span class="pin" style="left:88%;top:58%">13</span>
       </div>
       <div class="mapcap">Each number is that story with that number on this page.</div>
     </div>
@@ -230,30 +235,30 @@
       <h4>AND ALSO &mdash; STORIES 14&ndash;36</h4>
       <div class="alsolist">
         <ol>
-          <li><b>14.</b>Solomon Islands signs security pact with Australia &mdash; AP</li>
-          <li><b>15.</b>Kyiv counts 4 hurt after mall strike &mdash; Reuters</li>
-          <li><b>16.</b>Asian stocks bounce back &mdash; Kospi +2%, Nikkei +1.8% early on &mdash; Yonhap</li>
-          <li><b>17.</b>Virgin staff strike at 4 airports &mdash; ABC</li>
-          <li><b>18.</b>Swiss told to shut office, envoy given 48 hours to leave &mdash; Reuters</li>
-          <li><b>19.</b>Students march across Paris, Bastille to Panth&eacute;on, from 14:00 &mdash; AFP</li>
-          <li><b>20.</b>US markets shut for holiday, short trading day on Friday &mdash; Reuters</li>
-          <li><b>21.</b>&#8377;15,000 crore aid for Nepal after Modi&ndash;Shah talks &mdash; PTI</li>
-          <li><b>22.</b>Cairo tanker fire kills at least 30 &mdash; AFP</li>
-          <li><b>23.</b>Nigeria says 24 schoolgirls freed &mdash; TRT Afrika</li>
-          <li><b>24.</b>Australian inflation hits 4.9% &mdash; ABC News</li>
-          <li><b>25.</b>Tube drivers begin eight-strike campaign &mdash; RMT</li>
+          <li><b>14.</b>India and Nepal sign Rs 15,000 crore package &mdash; PTI</li>
+          <li><b>15.</b>US jobless claims fall to 189,000 &mdash; Reuters</li>
+          <li><b>16.</b>Nvidia sell-off drags S&amp;P and Nasdaq down &mdash; Reuters</li>
+          <li><b>17.</b>EU imposes visa bans, quotas on Chinese cars &mdash; Reuters</li>
+          <li><b>18.</b>Colombia police free 20 supermarket hostages &mdash; AP</li>
+          <li><b>19.</b>Sudan drone strikes kill 19 in Blue Nile &mdash; Reuters</li>
+          <li><b>20.</b>Saudi national kidnapped by 15 men in Niger &mdash; Reuters</li>
+          <li><b>21.</b>Cairo tanker crash fire kills at least 30 &mdash; AP</li>
+          <li><b>22.</b>Plane crashes into Gulf of Mexico; six aboard &mdash; AP</li>
+          <li><b>23.</b>PIA shifts UK flights to own 777 fleet today &mdash; Reuters</li>
+          <li><b>24.</b>EU leaders agree budget and &euro;45bn Ukraine loan &mdash; Council of the EU</li>
+          <li><b>25.</b>Sooryavanshi, 15, smashes 204 off 53 balls &mdash; Cricinfo</li>
         </ol>
         <ol>
-          <li><b>26.</b>US proposes 25% tariffs on India &mdash; MEA</li>
-          <li><b>27.</b>IPL auction: 1,220 players enter the pool &mdash; BCCI</li>
-          <li><b>28.</b>Sooryavanshi, 15, smashes 204 off 53 balls &mdash; Cricinfo</li>
-          <li><b>29.</b>US jobless claims fall to 189,000 &mdash; Reuters</li>
-          <li><b>30.</b>Nvidia sell-off drags S&amp;P and Nasdaq down &mdash; Reuters</li>
-          <li><b>31.</b>EU imposes visa bans, quotas on Chinese cars &mdash; Reuters</li>
-          <li><b>32.</b>Colombia police free 29 supermarket hostages &mdash; AP</li>
-          <li><b>33.</b>Sudan drone strikes kill 19 in Blue Nile &mdash; Reuters</li>
-          <li><b>34.</b>Saudi national kidnapped by 15 men in Niger &mdash; Reuters</li>
-          <li><b>35.</b>PIA shifts UK flights to own 777 fleet today &mdash; Reuters</li>
+          <li><b>26.</b>IITs add 6,000 seats in robotics, AI, space &mdash; Govt of India</li>
+          <li><b>27.</b>Tempus buys Personalis in $600m cash deal &mdash; Investing.com</li>
+          <li><b>28.</b>Xi probe hits Shanghai chief Chen Jining &mdash; Reuters</li>
+          <li><b>29.</b>Hera reveals DART crater on asteroid Dimorphos &mdash; ESA</li>
+          <li><b>30.</b>Brazil mosquitoes cut viral infections 68% &mdash; Study</li>
+          <li><b>31.</b>Palm Beach ferries strike shuts services &mdash; NSW Govt</li>
+          <li><b>32.</b>Malaysia sues Google for $146m over YouTube &mdash; Reuters</li>
+          <li><b>33.</b>Swiss tourist killed by elephants in Cameroon &mdash; AP</li>
+          <li><b>34.</b>Army blows up 5 tonnes of explosives in Iowa &mdash; Al Jazeera</li>
+          <li><b>35.</b>Coalition hits Hodeidah after Houthi attacks &mdash; Reuters</li>
           <li><b>36.</b>UN: Gaza staff sacked on unproven claims &mdash; The Guardian</li>
         </ol>
       </div>

@@ -1,4 +1,7 @@
 // News Image 20261126 — entry program: copy art.png to /output/entry.png
+// v2 pass (26 Nov 2026): front page rebuilt to copy the Top 1 layout more
+// faithfully — flat SVG leads, bright medium thumbnails with in-image data
+// chips, Top 1 medium order and ALSO ON list. Same copy + checks as v1.
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
